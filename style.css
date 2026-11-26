@@ -1,0 +1,280 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: #f8f1e7;
+    color: #80643e;
+    text-align: center;
+}
+
+.cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border: 3px solid #c9a96e;
+    background: linear-gradient(
+        135deg,
+        #fffdf8,
+        #f3e4ce
+    );
+}
+
+.cover h1 {
+    font-size: 48px;
+    font-style: italic;
+    font-weight: normal;
+    margin: 25px 0;
+    color: #987344;
+}
+
+.cover p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 12px 0;
+}
+
+button {
+    background: #a88b58;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #80643e;
+    transform: scale(1.05);
+}
+
+#invitation {
+    padding: 80px 20px;
+    background: #fffdf8;
+    min-height: 100vh;
+}
+
+#invitation h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .cover h1 {
+        font-size: 36px;
+    }
+
+    .cover p {
+        font-size: 14px;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 0.8s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.couple-photo {
+    width: 85%;
+    max-width: 400px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 200px 200px 15px 15px;
+    border: 5px solid #c9a96e;
+    padding: 5px;
+    margin: 30px auto;
+    display: block;
+    box-shadow: 0 10px 30px #00000020;
+}
+
+.countdown-section {
+    margin: 60px auto;
+    padding: 30px 10px;
+}
+
+.countdown-section h2 {
+    color: #987344;
+    font-style: italic;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px auto;
+}
+
+.time-box {
+    background: #fffdf8;
+    border: 1px solid #c9a96e;
+    border-radius: 12px;
+    padding: 15px 5px;
+    width: 85px;
+    box-shadow: 0 5px 15px #00000010;
+}
+
+.time-box span {
+    font-size: 30px;
+    font-weight: bold;
+    color: #987344;
+}
+
+.time-box p {
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.rsvp-section {
+    max-width: 750px;
+    margin: 60px auto;
+    padding: 25px 10px;
+    background: #f8f1e7;
+    border: 1px solid #c9a96e;
+    border-radius: 20px;
+}
+
+.rsvp-section h2 {
+    font-size: 32px;
+    color: #987344;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.rsvp-section p {
+    font-size: 15px;
+    line-height: 1.8;
+    padding: 10px;
+}
+
+.rsvp-section iframe {
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+
+/* Mobile Responsive Design */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+/* Smartphone Design */
+
+@media screen and (max-width: 600px) {
+
+    .cover {
+        min-height: 100svh;
+        padding: 20px;
+    }
+
+    .cover h1 {
+        font-size: 36px;
+    }
+
+    .cover p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    #invitation {
+        padding: 40px 15px;
+    }
+
+    #invitation h2 {
+        font-size: 25px;
+    }
+
+    .couple-photo {
+        width: 90%;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        margin: 25px auto;
+    }
+
+    .countdown {
+        gap: 6px;
+        width: 100%;
+    }
+
+    .time-box {
+        flex: 1;
+        min-width: 0;
+        padding: 12px 3px;
+    }
+
+    .time-box span {
+        font-size: 24px;
+    }
+
+    .time-box p {
+        font-size: 11px;
+    }
+
+    .rsvp-section {
+        width: 100%;
+        padding: 20px 5px;
+        margin: 40px auto;
+    }
+
+    .rsvp-section iframe {
+        width: 100%;
+        height: 1600px;
+    }
+
+    button {
+        max-width: 100%;
+        padding: 14px 25px;
+        font-size: 15px;
+    }
+}
